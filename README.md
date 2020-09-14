@@ -16,3 +16,10 @@ Means that after a crawl the result will be saved and if it exists already, the 
 
 ### --clearCache
 Will remove the cached file for the given `--item` if the file exists
+
+
+## TODOs
+- [ ] do something display wise with the mhz grouped aggregated items
+- [ ] make it a valid runnable shell script
+- [ ] add linting
+- [ ] add ci
