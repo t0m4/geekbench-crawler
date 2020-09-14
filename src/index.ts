@@ -15,8 +15,6 @@ commander
 
 const { item: itemToQuery, useCache, clearCache } = commander;
 
-import fs from 'fs/promises';
-
 async function run() {
   const aggregator = new Aggregator();
   const crawler = new Crawler(aggregator, itemToQuery, useCache, clearCache);
@@ -24,8 +22,6 @@ async function run() {
   await crawler.run();
 
   aggregator.aggregateData()
-
-  await fs.writeFile('asd.json', JSON.stringify(aggregator.aggregatedData, null, 2))
 
   displayResult(aggregator.aggregatedData);
 
